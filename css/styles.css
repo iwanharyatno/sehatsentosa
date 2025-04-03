@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #0d6efd;
+    --color-primary-dark: #1161d9;
+    --color-secondary: #6c757d;
+    --color-light: #f8f9fa;
+    --color-dark: #212529;
+    --color-white: #fff;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', 'Arial', Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    box-shadow: 0 0 12px -4px var(--color-secondary);
+}
+
+.navbar-title {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    font-weight: 300;
+}
+
+.navbar-menu {
+    flex-direction: column;
+    justify-content: space-between;
+    list-style-type: none;
+    gap: 1.5rem;
+    padding: 0;
+
+    display: flex;
+}
+
+.navbar-menu-hidden {
+    display: none;
+}
+
+.mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+p {
+    line-height: 1.8rem;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    border: none;
+    background-color: transparent;
+}
+
+.btn:hover {
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.btn-outlined {
+    color: var(--color-primary);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-primary);
+}
+
+.btn-outlined:hover {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+.hero {
+    background-image: linear-gradient(-120deg, #C6E7FF, #fff, #fff);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 2rem;
+}
+
+.hero-content {
+    max-width: 40rem;
+}
+.hero-title {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+.hero-highlight {
+    color: var(--color-primary);
+}
+.hero-description {
+    color: var(--color-secondary);
+    margin-bottom: 2rem;
+}
+
+.section {
+    padding: 4rem 2rem;
+}
+.section-title {
+    text-align: center;
+    color: var(--color-primary);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.layanan-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+}
+
+.layanan-card {
+    background-color: var(--color-white);
+    padding: 2rem;
+    box-shadow: 0 0 14px -8px var(--color-secondary);
+    border-radius: 1rem;
+    max-width: 20rem;
+    text-align: center;
+}
+.layanan-img {
+    width: 4rem;
+}
+
+.layanan-judul {
+    margin-top: 2rem;
+    padding: 0;
+}
+.layanan-deskripsi {
+    color: var(--color-secondary);
+}
+
+#hubungiKami {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-light);
+}
+
+.img-hubungi-kami {
+    width: 100%;
+}
+.desc-hubungi-kami {
+    max-width: 24rem;
+}
+
+.footer {
+    background-color: var(--color-dark);
+    padding: 2rem;
+    color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+    gap: 2rem;
+}
+.footer-contact {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.footer-contact li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.footer-section {
+    max-width: 32rem;
+}
+
+.hubungi-kami-judul {
+    color: var(--color-primary);
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-header .btn {
+        display: none;
+    }
+    .navbar {
+        flex-direction: row;
+        padding: 0.5rem 1.5rem;
+    }
+    .navbar-menu {
+        flex-direction: row;
+        display: flex;
+    }
+    .layanan-container {
+        flex-direction: row;
+    }
+    #hubungiKami {
+        flex-direction: row;
+    }
+    .footer {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-title {
+        font-size: 3rem;
+    }
+    .img-hubungi-kami {
+        max-width: 24rem;
+    }
+    .navbar-menu-hidden {
+        display: flex;
+    }
+}
