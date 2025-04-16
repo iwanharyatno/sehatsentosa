@@ -59,7 +59,7 @@ Proyek ini cocok digunakan untuk pembelajaran pemrograman web tingkat pemula hin
 
 3. Pindahkan folder ini ke dalam direktori `htdocs` (jika menggunakan XAMPP)
 
-4. Buat database MySQL baru denggan nama `db_sehatsentosa`, dan import file `db_sehatsentosa.sql`
+4. Buat database MySQL baru dengan nama `db_sehatsentosa`, dan import file `db_sehatsentosa.sql`
 
 5. Jalankan server lokal, lalu akses melalui browser:
    ```
