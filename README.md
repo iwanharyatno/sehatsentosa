@@ -43,8 +43,8 @@ Proyek ini cocok digunakan untuk pembelajaran pemrograman web tingkat pemula hin
 
 1. Clone repositori ini:
    ```bash
-   git clone https://github.com/username/nama-repo-booking-dokter.git
-   cd nama-repo-booking-dokter
+   git clone https://github.com/iwanharyatno/sehatsentosa.git
+   cd sehatsentosa
    ```
 
 2. Checkout ke branch yang diinginkan:
