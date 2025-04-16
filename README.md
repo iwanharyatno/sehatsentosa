@@ -59,17 +59,9 @@ Proyek ini cocok digunakan untuk pembelajaran pemrograman web tingkat pemula hin
 
 3. Pindahkan folder ini ke dalam direktori `htdocs` (jika menggunakan XAMPP)
 
-4. Buat database MySQL baru, misalnya `booking_dokter`, dan import file `database.sql` (terdapat di folder `sql/`)
+4. Buat database MySQL baru denggan nama `db_sehatsentosa`, dan import file `db_sehatsentosa.sql`
 
 5. Jalankan server lokal, lalu akses melalui browser:
    ```
-   http://localhost/nama-folder/
+   http://localhost/sehatsentosa/
    ```
-
-## 🧑‍💻 Kontribusi
-
-Silakan fork repositori ini dan buat pull request jika ingin menambahkan fitur atau perbaikan!
-
-## 📄 Lisensi
-
-Proyek ini dibagikan untuk tujuan edukasi dan pembelajaran. Gunakan dan modifikasi dengan bebas 🙌
