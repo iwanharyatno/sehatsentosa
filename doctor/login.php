@@ -5,13 +5,13 @@ $email = "";
 $password = "";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    require "config/db.php";
-    require "config/functions.php";
+    require "../config/db.php";
+    require "../config/functions.php";
 
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $sql = "SELECT * FROM pasien WHERE email = ?";
+    $sql = "SELECT * FROM dokter WHERE email = ?";
     $stmt = $db->prepare($sql);
 
     $stmt->bind_param('s', $email);
@@ -33,12 +33,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if (!$inputError) {
-        save_login($user['id_pasien']);
+        save_login($user['id'], $user['id_poli']);
 
         $stmt->close();
         $db->close();
 
-        header('Location: user/');
+        header('Location: index.php');
     }
 }
 ?>
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masuk | RS Sehat Sentosa</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="card">
                 <div class="card-body">
                     <form method="POST">
-                        <h3 class="card-title text-primary text-center mb-4">Masuk</h3>
+                        <h3 class="card-title text-primary text-center mb-4">Masuk Dokter</h3>
                         <?php if (isset($_SESSION['error'])): ?>
                             <div class="alert alert-danger alert-dismissible fade show my-4" role="alert">
                                 <?= $_SESSION['error'] ?>
@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
         </div>
     </div>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script>
         document.querySelector('#show_password').addEventListener('click', function() {
             const password = document.querySelector('#password');
